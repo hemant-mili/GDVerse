@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GDVerse</title>
+  <link rel="stylesheet" href="sidepanel.css">
+  <style>
+    body {
+      min-width: 300px;
+      max-width: 100%;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .container {
+      max-height: none;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>GDVerse</h1>
+    <div class="actions">
+      <button id="fillForms">Smart Fill</button>
+      <button id="manageData">Manage Data</button>
+    </div>
+    <div class="status" id="statusMessage"></div>
+    
+    <!-- User data section (initially hidden) -->
+    <div id="userData" style="display: none;">
+      <form id="userDataForm">
+        <div class="form-section">
+          <div class="form-group">
+            <label for="notes">Notes (Information to use when filling out forms)</label>
+            <textarea id="notes" name="notes" placeholder="Enter notes or context for AI to use when filling forms" rows="5"></textarea>
+          </div>
+        </div>
+        
+        <div class="settings-section">
+          <h3>Advanced Settings</h3>
+          <div class="form-check">
+            <input type="checkbox" id="enableLogging" name="enableLogging">
+            <label for="enableLogging">Enable debug logging</label>
+          </div>
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit">Save Data</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script src="sidepanel.js"></script>
+</body>
+</html> 
