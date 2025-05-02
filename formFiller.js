@@ -40,11 +40,7 @@ const FormFiller = (function() {
     // Test function to verify module functionality
     const testModule = () => {
         console.log('FormFiller test function called');
-        return {
-            status: 'success',
-            message: 'FormFiller module is working correctly',
-            timestamp: new Date().toISOString()
-        };
+        return 'FormFiller module is working!';
     };
 
     // Main function to fill form based on provided JSON
