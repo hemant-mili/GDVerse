@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "GDVerse",
   "version": "1.0",
-  "description": "GDVerse - Your Smart Form Assistant",
+  "description": "Automatically fill form fields using AI",
   "permissions": [
     "storage",
     "activeTab",
@@ -28,7 +28,16 @@
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
-      "type": "module"
+      "type": "module",
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "formFiller.js"
+      ],
+      "matches": ["<all_urls>"]
     }
   ],
   "side_panel": {
