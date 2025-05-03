@@ -27,6 +27,12 @@
     </div>
     <div class="status" id="statusMessage"></div>
     
+    <!-- Form confirmation section (initially hidden) -->
+    <div id="formConfirmation" style="display: none;" class="confirmation-section">
+      <div class="confirmation-message"></div>
+      <button id="confirmForms" class="confirm-button">Continue to Next Page</button>
+    </div>
+    
     <!-- User data section (initially hidden) -->
     <div id="userData" style="display: none;">
       <form id="userDataForm">
@@ -52,6 +58,6 @@
     </div>
   </div>
   
-  <script src="sidepanel.js"></script>
+  <script type="module" src="sidepanel.js"></script>
 </body>
 </html> 

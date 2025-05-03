@@ -2,13 +2,14 @@
   "manifest_version": 3,
   "name": "GDVerse",
   "version": "1.0",
-  "description": "Automatically fill form fields using AI",
+  "description": "Smart form filling extension",
   "permissions": [
     "storage",
     "activeTab",
     "scripting",
     "tabs",
-    "sidePanel"
+    "sidePanel",
+    "debugger"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -33,9 +34,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": [
-        "formFiller.js"
-      ],
+      "resources": ["background.js"],
       "matches": ["<all_urls>"]
     }
   ],
@@ -46,5 +45,8 @@
     "16": "images/icon16.png",
     "48": "images/icon48.png",
     "128": "images/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
   }
 } 
